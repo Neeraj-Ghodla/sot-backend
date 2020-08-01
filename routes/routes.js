@@ -57,12 +57,10 @@ router.get("/", async (req, res) => {
   data[index]["price"] = Math.floor(1 + Math.random() * 3);
   data[index]["rating"] = (1 + Math.random() * 4).toFixed(1);
 
-  res.json([
-    {
-      status: "okay",
-      data: data[index],
-    },
-  ]);
+  res.json({
+    status: "okay",
+    data: [data[index]],
+  });
 });
 
 module.exports = router;
