@@ -17,7 +17,11 @@ router.get("/", async (req, res) => {
   });
   parseString(data, (err, result) => {
     if (err) res.json({ msg: err });
-    else res.json(result["zenbu"]["entries"][0]["entry"]);
+    try {
+      res.json(result["zenbu"]["entries"][0]["entry"]);
+    } catch (err) {
+      res.json({ msg: "Not available" });
+    }
   });
 });
 
