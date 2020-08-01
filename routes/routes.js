@@ -12,7 +12,7 @@ router.get("/", async (req, res) => {
     params: {
       x: lon,
       y: lat,
-      key: "eddee0cb5be8a423780a5eaae551ba80e24a5024",
+      key: process.env.API_KEY,
     },
   });
   parseString(data, (err, result) => {
