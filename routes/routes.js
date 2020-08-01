@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
     try {
       res.json(result["zenbu"]["entries"][0]["entry"]);
     } catch (err) {
-      res.json({ msg: "Not available" });
+      res.json([]);
     }
   });
 });
