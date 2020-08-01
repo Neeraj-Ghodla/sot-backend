@@ -58,7 +58,7 @@ router.get("/", async (req, res) => {
 
   res.json({
     status: "okay",
-    data: data[index],
+    data: [data[index]],
   });
 });
 
